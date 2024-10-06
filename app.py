@@ -8,7 +8,9 @@ app = Flask(__name__)
 model = joblib.load('./model/trained_model.pkl')
 scaler = joblib.load('./model/scaler.pkl')
 
-numerical_features = ['bedrooms', 'bathrooms','sqft_living','sqft_lot', 'floors', 'waterfront', 'view', 'condition', 'grade','sqft_above','sqft_basement', 'yr_built', 'yr_renovated', 'zipcode', 'lat', 'long','sqft_living15','sqft_lot15']
+numerical_features = ['bedrooms', 'bathrooms','sqft_living','sqft_lot', 'floors', 
+'waterfront', 'view', 'condition', 'grade','sqft_above','sqft_basement', 'yr_built', 
+'yr_renovated', 'zipcode', 'lat', 'long','sqft_living15','sqft_lot15']
 
 @app.route('/predict', methods=['POST'])
 def predict():
